@@ -1,0 +1,129 @@
+/* Example animation */
+.animated-element {
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease; /* Smooth transition */
+}
+
+/* AOS classes */
+.animated-element[data-aos='fade-up'] {
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease; /* Smooth transition */
+}
+
+.animated-element[data-aos='fade-up'].aos-init {
+  opacity: 1; /* Show element after animation */
+}
+
+/* Custom CSS */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #adf6e5;
+  color: #c99898;
+}
+
+.header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  color: #ebe5e5;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 4px 8px 0 rgba(227, 216, 216, 0.2);
+  transition: 0.3s;
+  border-radius: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+.card {
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .card {
+      margin-bottom: 20px;
+  }
+}
+
+/* AOS Custom Animations */
+[data-aos="fade-up"] {
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-timing-function: ease-out;
+}
+
+[data-aos="fade-up"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+[data-aos="fade-in"] {
+  opacity: 0;
+  transition-property: opacity;
+  transition-timing-function: ease-out;
+}
+
+[data-aos="fade-in"].aos-animate {
+  opacity: 1;
+}
+
+/* Background image divs */
+.bg-image {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 200px; /* Adjust based on your need */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-text {
+  color: white;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
